@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Mal Diseño UX</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f0f2f5; /* Un gris más fresco */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.2em; /* Un poco más grande */
+        }
+
+        /* Estilo para el contenedor principal del análisis */
+        .ux-analysis-container {
+            background-color: #ffffff;
+            padding: 35px; /* Más padding */
+            border-radius: 12px; /* Más redondeado */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+            max-width: 850px; /* Ancho ligeramente mayor */
+            margin: 30px auto; /* Más margen arriba y abajo */
+        }
+
+        /* General paragraph styling within the container */
+        .ux-analysis-container p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px; /* Space between paragraphs */
+            text-align: left; /* Align text to the left for readability */
+        }
+
+        /* Estilo para los títulos de sección dentro del análisis (ej. "Problemas de UX") */
+        .ux-analysis-container h2 {
+            font-size: 1.6em; /* Tamaño de subtítulo */
+            color: #e74c3c; /* Color de acento para problemas (rojo/naranja) */
+            border-bottom: 2px solid #e74c3c; /* Subrayado para destacar */
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        /* Estilo específico para las Recomendaciones */
+        .ux-analysis-container h2.recommendations {
+            color: #28a745; /* Color de acento para recomendaciones (verde) */
+            border-bottom-color: #28a745;
+        }
+
+        /* Estilo para los elementos de lista (aunque estén con guiones en el HTML) */
+        .ux-analysis-container ul {
+            list-style: none; /* Quita los puntos de la lista por defecto */
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .ux-analysis-container li {
+            margin-bottom: 8px; /* Espacio entre ítems de la lista */
+            padding-left: 25px; /* Espacio para un ícono personalizado */
+            position: relative; /* Para posicionar el ícono */
+        }
+
+        /* Ícono de "problema" para los puntos */
+        .ux-analysis-container li::before {
+            content: '•'; /* Un punto como marcador */
+            color: #e74c3c; /* Color del punto para problemas */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Ícono de "solución" para las recomendaciones */
+        .ux-analysis-container h2.recommendations + ul li::before {
+            content: '✓'; /* Un checkmark para las recomendaciones */
+            color: #28a745; /* Color del checkmark */
+        }
+        
+        /* Estilo para el sitio evaluado y las descripciones en negrita */
+        .ux-analysis-container strong {
+            color: #34495e; /* Un color un poco más oscuro para el texto en negrita */
+        }
+    </style>
+</head>
+<body>
+    <h1>Análisis Básico de Mal Diseño UX</h1>
+
+    <div class="ux-analysis-container">
+        <p>
+            <strong>Sitio Evaluado:</strong> https://santodomingo.craigslist.org/
+        </p>
+
+        <h2>Descripción</h2>
+        <p>
+            Craigslist Santo Domingo es una plataforma de anuncios clasificados donde los usuarios pueden publicar y buscar productos y servicios. Su objetivo es conectar compradores y vendedores de manera rápida y local.
+        </p>
+
+        <h2>Problemas de UX</h2>
+        <ul>
+            <li>Diseño anticuado y poco atractivo visualmente, lo que puede causar desconfianza o falta de interés.</li>
+            <li>Navegación confusa debido a la falta de jerarquía visual clara en los menús y opciones.</li>
+            <li>Demasiado texto sin imágenes que facilite la comprensión rápida de las categorías.</li>
+            <li>No es responsivo ni optimizado para dispositivos móviles, dificultando su uso en smartphones.</li>
+            <li>Falta de indicadores claros para las acciones importantes como publicar un anuncio o contactar a un vendedor.</li>
+        </ul>
+
+        <h2>Impacto en el usuario</h2>
+        <ul>
+            <li>Los usuarios pueden sentirse frustrados al no encontrar fácilmente lo que buscan.</li>
+            <li>La desconfianza en el sitio puede aumentar por la apariencia poco profesional.</li>
+            <li>La dificultad en la navegación puede provocar que abandonen la plataforma.</li>
+        </ul>
+
+        <h2 class="recommendations">Recomendaciones</h2>
+        <ul>
+            <li>Modernizar el diseño para hacerlo más atractivo y profesional.</li>
+            <li>Simplificar la navegación con menús claros y jerarquía visual definida.</li>
+            <li>Añadir imágenes o iconos para facilitar la identificación de categorías.</li>
+            <li>Optimizar la versión móvil para mejorar la accesibilidad desde smartphones.</li>
+            <li>Implementar botones y llamadas a la acción visibles y fáciles de usar.</li>
+        </ul>
+    </div>
+</body>
+</html>
